@@ -7,7 +7,7 @@
     {{session::get('success')}}
       </div>
     @endif
-    <table class="table table-info table-striped">
+    <table class="table table-warning table-striped">
       <thead class="bg-gray-50">
         <tr>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">ID</th>
