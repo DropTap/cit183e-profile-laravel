@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,10 @@ Route::get('/delete/{id}',[CustomerController::class,'delete']);
 
 Route::post('/login/process', [UserController::class, 'process']);
 Route::post('/store', [UserController::class, 'store']);
-
-
 Route::get('/logout', [UserController::class, 'logout']);
+
+Route::get('/delete/{id}',[CustomerController::class,'delete'])->middleware('auth');;
+
+Route::get('/addUser',[CustomerController::class,'addUser']);
+Route::post('/save',[CustomerController::class,'save']);
 ?>
